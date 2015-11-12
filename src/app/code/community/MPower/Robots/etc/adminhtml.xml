@@ -28,34 +28,23 @@
  * @license     http://opensource.org/licenses/MIT The MIT License (MIT)
 -->
 <config>
-    <modules>
-        <MPower_Robots>
-            <version>0.1.0</version>
-        </MPower_Robots>
-    </modules>
-
-    <frontend>
-        <routers>
-            <mpower_robots>
-                <use>standard</use>
-                <args>
-                    <module>MPower_Robots</module>
-                    <frontName>robots.txt</frontName>
-                </args>
-            </mpower_robots>
-        </routers>
-    </frontend>
-
-    <default>
-        <mpower_robots>
-            <robots>
-                <content>
-User-agent: *
-Disallow: /checkout/
-Disallow: /catalogsearch/
-Disallow: /customer/
-                </content>
-            </robots>
-        </mpower_robots>
-    </default>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <mpower_robots translate="title">
+                                        <title>robots.txt configuration</title>
+                                    </mpower_robots>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
 </config>

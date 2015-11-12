@@ -28,34 +28,32 @@
  * @license     http://opensource.org/licenses/MIT The MIT License (MIT)
 -->
 <config>
-    <modules>
-        <MPower_Robots>
-            <version>0.1.0</version>
-        </MPower_Robots>
-    </modules>
-
-    <frontend>
-        <routers>
-            <mpower_robots>
-                <use>standard</use>
-                <args>
-                    <module>MPower_Robots</module>
-                    <frontName>robots.txt</frontName>
-                </args>
-            </mpower_robots>
-        </routers>
-    </frontend>
-
-    <default>
-        <mpower_robots>
-            <robots>
-                <content>
-User-agent: *
-Disallow: /checkout/
-Disallow: /catalogsearch/
-Disallow: /customer/
-                </content>
-            </robots>
+    <sections>
+        <mpower_robots translate="label">
+            <label>Robots for search engines</label>
+            <sort_order>100</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <robots translate="label">
+                    <label>robots.txt</label>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <expanded>1</expanded>
+                    <fields>
+                       <content translate="label">
+                            <label>Content</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </content>
+                    </fields>
+                </robots>
+            </groups>
         </mpower_robots>
-    </default>
+    </sections>
 </config>

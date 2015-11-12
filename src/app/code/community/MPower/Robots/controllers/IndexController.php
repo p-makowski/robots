@@ -1,5 +1,5 @@
-<?xml version="1.0"?>
-<!--
+<?php
+/**
  * The MIT License (MIT)
  *
  * Copyright (c) 2015 Patryk Makowski
@@ -26,36 +26,22 @@
  * @package     MPower_Robots
  * @author      Patryk Makowski <magento@makowski.no>
  * @license     http://opensource.org/licenses/MIT The MIT License (MIT)
--->
-<config>
-    <modules>
-        <MPower_Robots>
-            <version>0.1.0</version>
-        </MPower_Robots>
-    </modules>
+ */
 
-    <frontend>
-        <routers>
-            <mpower_robots>
-                <use>standard</use>
-                <args>
-                    <module>MPower_Robots</module>
-                    <frontName>robots.txt</frontName>
-                </args>
-            </mpower_robots>
-        </routers>
-    </frontend>
+/**
+ * Class MPower_Robots_IndexController
+ */
+class MPower_Robots_IndexController extends Mage_Core_Controller_Front_Action
+{
+    /**
+     * Index action
+     */
+    public function indexAction()
+    {
+        /** @var Mage_Core_Controller_Response_Http $response */
+        $response = $this->getResponse();
 
-    <default>
-        <mpower_robots>
-            <robots>
-                <content>
-User-agent: *
-Disallow: /checkout/
-Disallow: /catalogsearch/
-Disallow: /customer/
-                </content>
-            </robots>
-        </mpower_robots>
-    </default>
-</config>
+        $response->setHeader('Content-type', 'text/plain');
+        $response->setBody(Mage::getStoreConfig('mpower_robots/robots/content'));
+    }
+}

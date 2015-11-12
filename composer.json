@@ -1,15 +1,15 @@
 {
-    "name": "mpower/robots",
-    "license": "OSL-3.0",
-    "type": "magento-module",
-    "description": "Magento module adding ability to serve store specific robots.txt files with different content",
-    "require": {
-        "magento-hackathon/magento-composer-installer": "*"
-    },
+    "name":         "mpower/robots",
+    "license":      "The MIT License (MIT)",
+    "type":         "magento-module",
+    "description":  "Magento module adding ability to serve store specific robots.txt files with different content",
     "authors":[
         {
-            "name":"Patryk Makowski",
-            "email":"magento@makowski.no"
+            "name":     "Patryk Makowski",
+            "email":    "magento@makowski.no"
         }
-    ]
+    ],
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
 }
