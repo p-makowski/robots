@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <MPower_Robots>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends></depends>
+        </MPower_Robots>
+    </modules>
+</config>

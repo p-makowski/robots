@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <MPower_Robots>
+            <version>1.0.0</version>
+        </MPower_Robots>
+    </modules>
+    <global>
+    </global>
+</config>
